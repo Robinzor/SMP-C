@@ -62,7 +62,28 @@ Output:     ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically
 # 6d
 Conclusie:  Nee, want je weet niet welke parameters zijn meegegeven aan het commando.
 
-# 7
+# 7 
+Vraag:      "Wat is 'puts' (een variabele, functie, of ?? ) en waar is het gedefinieerd?
+Conclusie:  De C-bibliotheekfunctie int puts (const char * str) schrijft een string naar stdout tot maar zonder het null-teken. Een newline-teken wordt aan de uitvoer toegevoegd.
+
+# 7b
+Vraag:      "Wat is 'puts@@GLIBC_2.2.5' (een variabele, functie, of ?? ) en waar is het gedefinieerd?
+Conclusie:  Puts is ook aanwezig in de "GNU C Library (glibc)". Dit staat gedefineerd in de debug informatie die met strip is verwijderd.
+
+# 8
+Vraag:      "Onderzoek beide programma's opg1a en opg1ab met readelf -h"  (Dit geeft de header informatie)
+Actie:      "is er een verschil in aantal program headers, aantal section headers en het entry point
+            tussen het originele programma en de ge'strip'de versie ?"
+
+executable:             
+opga1   (non-stripped)          opg1ab (stripped)   
+program headers =   56 (bytes)  program headers =  56 (bytes)
+section headers =   30          section headers =  28
+entry point =       0x1050      entry point =   0x1050
+
+
+
+
 
 
 
