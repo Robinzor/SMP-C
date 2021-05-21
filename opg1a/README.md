@@ -75,12 +75,26 @@ Vraag:      "Onderzoek beide programma's opg1a en opg1ab met readelf -h"  (Dit g
 Actie:      "is er een verschil in aantal program headers, aantal section headers en het entry point
             tussen het originele programma en de ge'strip'de versie ?"
 
-executable:             
+Vergelijk executable:             
 opga1   (non-stripped)          opg1ab (stripped)   
 program headers =   56 (bytes)  program headers =  56 (bytes)
 section headers =   30          section headers =  28
 entry point =       0x1050      entry point =   0x1050
 
+Conclusie: Alleen debug informatie wordt verwijderd. Het programma werkt ook gewoon via "./opg1ab".
+
+# 9a
+Vraag "Kopieer het programma opg1a naar opg1ad."
+Actie: cp opg1a opg1ad
+
+# 9b (hex-editor)
+Vraag: Wijzig de byte op offset positie 5 ( vanaf het begin v/h bestand ) van 0x01 naar 0x02.  
+Actie: sudo apt-get install hexedit
+Actie: hexedit opg1ad
+Actie: aanpassing hierna CTRL+S
+Conclusie: Het lijkt er op dat de hele layout van de file is aangepast.
+Hierdoor kan de file nog wel runnen alleen het geeft foutmeldingen bij het lezen van readelf.
+Dit komt door de wijziging van de hex-editor.
 
 
 
