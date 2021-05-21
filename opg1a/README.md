@@ -36,9 +36,37 @@ Vraag:      "Analyseer het programma opg1a m.b.v. het strings commando.
             zijn de namen van de nieuwe de definities, glob. variabele msg en functie toon, terug
             te vinden in de strings output ? Geef een duidelijke verklaring waarom dit zo is"
 Actie:      strings opg1a
-Output:     De variabele"toon" is terug te vinden want dit is een methode. 
+Output:     De variabele "toon" is terug te vinden want dit is een methode. 
             Echter is dit niet het geval voor de global variable "msg", omdat dit niet meer te lezen is na het compilen.
 
+# 6
+Vraag:      "Voer het volgende commando uit.
+Comment:    (Dit commando verwijdert alle symbols van het programma opg1a en plaats het resultaat in output)
+Actie:      strip -s -o opg1ab opg1a
+Output 1: (file opg1ab) ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=dbcc6dcc4fa2080f0a637f02205c9ec2a7769ce2, stripped
 
-            
+
+# 6b
+Vraag:      "Analyseer het programma opg1a m.b.v. het strings commando.
+            zijn de namen van de nieuwe de definities, glob. variabele msg en functie toon, terug
+            te vinden in de strings output ? Geef een duidelijke verklaring waarom dit zo is"
+Actie:      strings opg1ab
+Output:     Bijde variable zijn niet meer terug te vinden na de strip.
+
+# 6c
+Vraag:      "Wat geeft het file opg1ac commando als output?"
+Actie:      strip -s -K main -o opg1ac opg1a
+Actie:      file opg1ac
+Output:     ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]        =dbcc6dcc4fa2080f0a637f02205c9ec2a7769ce2, not stripped
+
+# 6d
+Conclusie:  Nee, want je weet niet welke parameters zijn meegegeven aan het commando.
+
+# 7
+
+
+
+
+
+
 
