@@ -1,4 +1,3 @@
-
 # Compiling syntax:
 gcc opg1a.c -o opg1a
 
