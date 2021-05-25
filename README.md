@@ -19,4 +19,9 @@ gcc		    opg1a.c 	-o 		    helloworld
 # Running Mac:
 ./filename
 
+# Debug file
+gdb -batch -ex 'file opg1b' -ex 'disassemble/rs main'
+
+# Hexedit
+hexedit file
 
