@@ -47,8 +47,21 @@
 11      16,2        +                           +           2x pop 2+16 = 18
 
 # Actie 4
+./rpn '1 2 3 4 5 6 + * – *'
+Expected: -82
+Output: 2
 
+./rpn '1 2 3 4 5 6 + * – * +'
+Expected: -81
+Output: fout in berekening
 
+./rpn '6 5 4 3 2 1 + * – * +'
+Expected: -19
+Output: fout in berekening
+
+./rpn '6 5 4 3 2 1 + * – * + *'
+Expected: NaN
+Output: fout in berekening
 
 
 
