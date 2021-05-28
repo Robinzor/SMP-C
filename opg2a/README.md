@@ -13,5 +13,6 @@ De inhoud van dit nieuwe element wordt geïnitialiseerd naar een kopie van val.
 5. add r12d,r12d                                2
 6. add ebx,0x4                      4
 7. imul ebx,r12d                    8           2
-8. mov eax,ebx          8           8           
+8. mov eax,ebx           8          8           
+
 
