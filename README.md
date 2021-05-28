@@ -19,9 +19,14 @@ gcc		    opg1a.c 	-o 		    helloworld
 # Running Mac:
 ./filename
 
+# Hexedit
+hexedit file
+
+# Intel or att notation (debugger)
+nano ~/.gdbinit
+set disassembly-flavor intel
+
 # Debug file
 gdb -batch -ex 'file opg1b' -ex 'disassemble/rs main'
 
-# Hexedit
-hexedit file
 
